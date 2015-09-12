@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <title>Button Fun</title>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+        	$(document).ready(function()
+        	{
+        		$(document).on("click", ".btn", function()
+        		{
+        			$(this).toggleClass("btn_red");
+        		});
+        		$('.btn').hover(function()
+        		{
+        			$(this).addClass('green');
+        		}, function()
+        		{
+        			$(this).removeClass('green');
+        		})
+        	})
+        </script>
+        <style type="text/css">
+        	.btn
+        	{
+        		background-color: blue;
+        		color: white;
+        	}
+        	.btn_red
+        	{
+        		background-color: red;
+        	}
+        	.green
+        	{
+        		background-color: green;
+        	}
+        </style>
+    </head>
+    <body>
+        <button class="btn">Magic Button</button>
+    </body>
+</html>
